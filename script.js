@@ -11,3 +11,19 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+const text = document.querySelector(".profession-1");
+const textLoad = () => {
+    setTimeout(() => {
+        text.textContent = "Scripter";
+    }, 0);
+    setTimeout(() => {
+        text.textContent = "UI/UX Designer";
+    }, 4000);
+    setTimeout(() => {
+        text.textContent = "Discord Bot Developer";
+    }, 8000);
+}
+
+textLoad();
+setInterval(textLoad, 12000);

@@ -71,18 +71,50 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+.header-text span {
+    position: relative;
+    color: #0091ff;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.header-text span.profession-0 {
+    color: #fff;
+}
+
+.header-text span.profession-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #080808;
+    border-left: 2px solid #0091ff;
+    animation: animate 4s  steps(12) infinite;
+}
+
+@keyframes animate {
+    40%, 60% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
 }
 
 .header-text h1{
-    font-size: 60px;
+    font-size: 46px;
     margin-top: 20px;
 }
 
 .header-text h1 span{
-    color: #0091ff;
+    font-size: 64px;
 }
 
 #about{
