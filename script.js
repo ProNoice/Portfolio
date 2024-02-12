@@ -1,3 +1,12 @@
+
+window.addEventListener('load', (event) => {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('loader-hidden');
+    loader.addEventListener('transitionend', () => {
+        document.body.removeChild('loader');
+    });
+});
+
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -12,18 +21,23 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-const text = document.querySelector(".profession-1");
-const textLoad = () => {
-    setTimeout(() => {
-        text.textContent = "Scripter";
-    }, 0);
-    setTimeout(() => {
-        text.textContent = "UI/UX Designer";
-    }, 4000);
-    setTimeout(() => {
-        text.textContent = "Discord Bot Developer";
-    }, 8000);
-}
+var typed = new Typed('.profession-1', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 75,
+    backSpeed: 75,
+    loop: true
+});
 
-textLoad();
-setInterval(textLoad, 12000);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((element) => observer.observe(element));

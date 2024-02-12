@@ -21,36 +21,42 @@
                 </ul>
             </nav>
             <div class="header-text">
-                <span class="profession-0">I'm a</span>
-                <span class="profession-1">Scripter</span>
                 <h1>Hi, I'm <span>Nexus Novelist</span></h1>
+                <span class="profession-0">I'm a</span>
+                <div id="typed-strings">
+                    <p>Scripter</p>
+                    <p>UI/UX Designer</p>
+                    <p>Discord Bot Developer</p>
+                </div>
+                <span class="profession-1">Scripter</span>
             </div>
         </div>
     </div>
+    <div class="loader"></div>
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
+                <div class="about-col-1 hidden">
                     <img src="images/PFP.png">
                 </div>
-                <div class="about-col-2">
+                <div class="about-col-2 hidden">
                     <h1 class="subtitle">About Me</h1>
                     <p>Hello, I am Nexus Novelist, I've been scripting on Roblox for about 4+ years now. I've recently learned alot and finished many projects, which are all stated below, with scripting examples!<br>
-                    I also design UI, mostly cartoony UI though, I've been doing my best to move out of that and learn new things!
+                        I also design UI, mostly cartoony UI though, I've been doing my best to move out of that and learn new things!
                     </p>
                     
-                    <div class="tab-titles">
+                    <div class="tab-titles hidden">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
+                    <div class="tab-contents active-tab hidden" id="skills">
                         <ul>
                             <li><span>Scripting</span><br>Experience with designing Gameplay features, ranging from tiny features all the way to massive systems!</li>
                             <li><span>UI</span><br>Experience with designing UI, both in third party software and Roblox Studio, and experience scripting the UI!</li>
                             <li><span>Discord Bot Creation</span><br>Experience with coding Discord moderation, database, and verification bots!</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="experience">
+                    <div class="tab-contents hidden" id="experience">
                         <ul>
                             <li><span>2023 - NOW</span><br>Scripter, UI Designer and Head of Services for Trackway Productions!</li>
                             <li><span>2023 - 2024</span><br>Created multiple bots for Trackway Productions discord server!</li>
@@ -64,8 +70,8 @@
     </div>
     <div id="services">
         <div class="container">
-            <h1 class="subtitle">My Services</h1>
-            <div class="services-list">
+            <h1 class="subtitle hidden">My Services</h1>
+            <div class="services-list hidden">
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Professional Scripting</h2>
@@ -92,8 +98,8 @@
         <div class="container">
             <h1 class="subtitle">My Work</h1>
             <div class="work-list">
-                <h1><i class="fa-solid fa-folder"></i> Projects</h1>
-                <div class="work">
+                <h1><i class="fa-solid fa-folder  hidden"></i> Projects</h1>
+                <div class="work hidden">
                     <img src="images/CF.png">
                     <div class="layer">
                         <h3>Click Frenzy</h3>
@@ -102,7 +108,7 @@
                         <a href="https://www.roblox.com/games/14897479730/Click-Frenzy-RELEASE"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hidden">
                     <img src="images/JT.png">
                     <div class="layer">
                         <h3>Jenga Tower</h3>
@@ -111,7 +117,7 @@
                         <a href="https://www.roblox.com/games/8770563215/Read-Desc-Jenga-Tower"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hidden">
                     <img src="images/JD.png">
                     <div class="layer">
                         <h3>Jenga Destroyer</h3>
@@ -122,21 +128,21 @@
                 </div>
                 <h1><i class="fa-solid fa-file"></i> Scripting Examples</h1>
                 <p>(sorry for the laggy clips, i was recording through Roblox Studio)</p>
-                <div class="example">
+                <div class="example hidden">
                     <iframe width="1280" height="720" src="https://www.youtube.com/embed/IOC8jIDNO8s?list=PLfqDJf4tjm62aDTIJ1l4x0LjDXV7ndldZ" title="Basic tycoon (speedran)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <div class="layer">
                         <h3>Basic Tycoon</h3>
                         <p>I speedran making a basic tycoon in ~25 minutes, which has most features a tycoon needs.</p>
                     </div>
                 </div>
-                <div class="example">
+                <div class="example hidden">
                     <iframe width="1280" height="720" src="https://www.youtube.com/embed/nhAIdkIL4ZI" title="Barebones crafting system" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <div class="layer">
                         <h3>Basic crafting system</h3>
                         <p>A barebones crafting system.</p>
                     </div>
                 </div>
-                <div class="example">
+                <div class="example hidden">
                     <iframe width="1280" height="720" src="https://www.youtube.com/embed/adb1fCJSsfc" title="doors clone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <div class="layer">
                         <h3>Doors clone</h3>
@@ -147,13 +153,14 @@
         </div>
     </div>
     <div id="contact">
-        <div class="container">
+        <div class="container hidden">
             <h1 class="subtitle">Contact Me</h1>
             <br>
             <h3>Find me on <i class="fa-brands fa-discord"></i> Discord @nexus_novelist</h3>
         </div>
     </div>
 
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 
 </body>
