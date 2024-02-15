@@ -45,11 +45,26 @@ particlesJS.load('particles-js', 'particles.json', function() {
     console.log('callback - particles.js config loaded');
 });
 
+let isHidden = true
+
 function showMoreWork(){
-    const hiddenWork = document.querySelectorAll(".hidden-work");
-    for(let i = 0; i < hiddenWork.length; i++){
-        hiddenWork[i].classList.remove('hidden-work');
-        hiddenWork[i].classList.add('show');
+    if(isHidden){
+        const hiddenWork = document.querySelectorAll(".hidden-work");
+        for(let i = 0; i < hiddenWork.length; i++){
+            hiddenWork[i].classList.remove('hidden-work');
+            hiddenWork[i].classList.add('show');
+            hiddenWork[i].classList.add('was-hidden-work');
+        }
+        document.getElementById('hidden-work-btn').textContent = "SHOW LESS";
+    }else{
+        const wasHiddenWork = document.querySelectorAll(".was-hidden-work");
+        for(let i = 0; i < wasHiddenWork.length; i++){
+            wasHiddenWork[i].classList.remove('show');
+            wasHiddenWork[i].classList.remove('was-hidden-work');
+            wasHiddenWork[i].classList.add('hidden-work');
+            console.log(wasHiddenWork[i].classList);
+        }
+        document.getElementById('hidden-work-btn').textContent = "SHOW MORE";
     }
-    document.getElementById('hidden-work-btn').remove();
+    isHidden = !isHidden;
 }

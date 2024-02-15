@@ -112,7 +112,7 @@ body{
 
 .btn-design-1 {
     position: relative;
-    margin: 75px auto;
+    margin: 75px auto 75px;
     display: block;
     border: 1px solid #0091ff;
     background: none;
