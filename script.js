@@ -30,8 +30,7 @@ var typed = new Typed('.profession-1', {
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
-        if(entry.isIntersecting) {
+        if(entry.isIntersecting && !entry.target.classList.contains('hidden-work')) {
             entry.target.classList.add('show');
         } else {
             entry.target.classList.remove('show');
@@ -45,3 +44,12 @@ hiddenElements.forEach((element) => observer.observe(element));
 particlesJS.load('particles-js', 'particles.json', function() {
     console.log('callback - particles.js config loaded');
 });
+
+function showMoreWork(){
+    const hiddenWork = document.querySelectorAll(".hidden-work");
+    for(let i = 0; i < hiddenWork.length; i++){
+        hiddenWork[i].classList.remove('hidden-work');
+        hiddenWork[i].classList.add('show');
+    }
+    document.getElementById('hidden-work-btn').remove();
+}
