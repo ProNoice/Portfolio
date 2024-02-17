@@ -11,7 +11,7 @@ body{
 }
 
 ::-webkit-scrollbar{
-    width: 15px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track{
     background: #464646;
@@ -19,7 +19,7 @@ body{
 
 ::-webkit-scrollbar-thumb{
     background: #2f2f2f;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 #header{
@@ -154,9 +154,14 @@ nav{
     flex-wrap: wrap;
     background-color: #262626;
     width: 80vw;
-    border-radius: 25px;
+    border-radius: 50px;
     padding-right: 50px;
     padding-left: 50px;
+}
+
+nav h1 {
+    pointer-events: none;
+    user-select: none;
 }
 
 .logo{
