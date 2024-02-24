@@ -79,7 +79,7 @@ body{
     border: 15px solid #464646;
     border-top-color: #0091ff;
     border-radius: 50%;
-    animation: loading 0.75s ease infinite;
+    animation: loading 0.75s linear infinite;
 }
 
 @keyframes loading {
@@ -146,17 +146,18 @@ body{
 }
 
 nav{
-    position: fixed;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #262626;
-    width: 80vw;
-    border-radius: 50px;
+    background-color: rgba(150,150,150,0.25);
+    backdrop-filter: blur(10px);
+    width: 75vw;
+    border-radius: 10px;
     padding-right: 50px;
     padding-left: 50px;
+    position: fixed;
 }
 
 nav h1 {
@@ -344,18 +345,21 @@ nav ul li a:hover::after{
 }
 
 .work{
+    background: rgba(0, 157, 255, 0.25);
+    backdrop-filter: blur(10px);
     margin: auto;
     margin-top: 5%;
     width: 50%;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 
 .work img{
     width: 100%;
     border-radius: 10px;
-    display: block;
     transition: transform 0.5s;
 }
 
@@ -404,7 +408,7 @@ nav ul li a:hover::after{
     height: 60px;
     border-radius: 50%;
     text-align: center;
-    pointer-events: fill;
+    pointer-events: all;
 }
 
 .example{
@@ -429,7 +433,14 @@ iframe {
     padding-bottom: 500px;
 }
 
+nav .fas{
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
+    .work {
+        width: 90%;
+    }
     .layer{
         font-size: 6px;
     }
@@ -442,5 +453,39 @@ iframe {
         font-size: 8px;
         width: 20px;
         height: 20px;
+    }
+    .container{
+        padding: 0;
+    }
+    nav {
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+        margin: 0;
+    }
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #0091ff;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 200;
+        transition: 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
 }

@@ -16,13 +16,15 @@
         <div class="container">
             <nav>
                 <h1><font color="#0077ff" size="6">N</font>EXUS NOVELIST<font size="7">.</font></h1>
-                <ul>
+                <ul id="side-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-circle-xmark" onclick="CloseMenu()"></i>
                 </ul>
+                <i class="fas fa-solid fa-bars" onclick="OpenMenu()"></i>
             </nav>
             <div class="header-text">
                 <h1>Hi, I'm <span>Nexus Novelist</span></h1>
@@ -98,11 +100,11 @@
         </div>
     </div>
 
-    <div id="portfolio">
+    <div id="projects">
         <div class="container">
-            <h1 class="subtitle">My Work</h1>
-            <div class="work-list">
-                <h1><i class="fa-solid fa-folder  hidden"></i> Projects</h1>
+            <h1 class="subtitle hidden">My Work</h1>
+            <div class="work-list hidden">
+                <h1><i class="fa-solid fa-folder "></i> Projects</h1>
                 <div class="work hidden">
                     <img src="images/CF.png">
                     <div class="layer">

@@ -62,9 +62,18 @@ function showMoreWork(){
             wasHiddenWork[i].classList.remove('show');
             wasHiddenWork[i].classList.remove('was-hidden-work');
             wasHiddenWork[i].classList.add('hidden-work');
-            console.log(wasHiddenWork[i].classList);
         }
         document.getElementById('hidden-work-btn').textContent = "SHOW MORE";
     }
     isHidden = !isHidden;
+}
+
+const sideMenu = document.getElementById("side-menu");
+
+function OpenMenu(){
+    sideMenu.style.right = "0";
+}
+
+function CloseMenu(){
+    sideMenu.style.right = "-300px";
 }
