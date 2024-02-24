@@ -10,6 +10,10 @@ body{
     color: #fff;
 }
 
+img {
+    pointer-events: none;
+}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -431,6 +435,64 @@ iframe {
 
 #contact {
     padding-bottom: 500px;
+}
+
+.ui-work-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.ui-work {
+    background: rgba(0,0,0,0);
+    pointer-events: all;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.ui-work:hover {
+    background: rgba(150,150,150,0.5);
+}
+
+.img-s {
+    width: 64px;
+    height: 64px;
+}
+
+.img-l {
+    width: 128px;
+    height: 128px;
+}
+
+.img-xl {
+    width: 256px;
+    height: 256px;
+}
+
+.img-xxl {
+    width: 512px;
+    height: 512px;
+}
+
+.img-l-w {
+    width: 256px;
+    height: 156px;
+}
+
+.img-xl-w {
+    width: 512px;
+    height: 350px;
+    aspect-ratio: 16/9;
+}
+
+.img-l-h {
+    width: 512px;
+    height: 64px;
+}
+
+.img-xxl-w {
+    width: 512px;
+    height: 356px;
 }
 
 nav .fas{
