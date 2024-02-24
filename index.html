@@ -38,6 +38,13 @@
             </div>
         </div>
     </div>
+    <div id="popup-shadow">
+        <div id="popup">
+            <h1 id="popup-title">POPUP TITLE</h1>
+            <i class="popup-close fa-solid fa-circle-xmark" onclick="ClosePopup()"></i>
+            <p id="popup-description">Popup Description, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae accusantium harum molestias aliquid ea reprehenderit adipisci!</p>
+        </div>
+    </div>
     <div id="about">
         <div class="container">
             <div class="row">
@@ -82,19 +89,19 @@
                     <i class="fa-solid fa-code"></i>
                     <h2>Professional Scripting</h2>
                     <p>Professional Roblox Studio scripting with years of experience!</p>
-                    <a href="#">Learn more</a>
+                    <a onclick="OpenPopup('Professional Scripting')">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-layer-group"></i>
                     <h2>UI Design</h2>
                     <p>UI Design through external software and scripting!</p>
-                    <a href="#">Learn more</a>
+                    <a onclick="OpenPopup('UI Design')">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-robot"></i>
                     <h2>Discord Bot Development</h2>
                     <p>Discord bot Development via Discord.py!</p>
-                    <a href="#">Learn more</a>
+                    <a onclick="OpenPopup('Discord Bot Development')">Learn more</a>
                 </div>
             </div>
         </div>

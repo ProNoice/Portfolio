@@ -77,3 +77,19 @@ function OpenMenu(){
 function CloseMenu(){
     sideMenu.style.right = "-300px";
 }
+
+let services = {
+    ["Professional Scripting"]: "Professional Lua Programming with 4+ years of experience and many finished projects to showcase!",
+    ["UI Design"]: "UI designing experience for 1 year, able to design UI, UX, Logos, and icons!",
+    ["Discord Bot Development"]: "Discord bot development with 1+ years of experience, able to deliver complex systems such as verification and moderation!"
+}
+
+function ClosePopup() {
+    document.getElementById("popup-shadow").style.display = "none";
+}
+
+function OpenPopup(name) {
+    document.getElementById("popup-shadow").style.display = "block";
+    document.getElementById("popup-title").textContent = name;
+    document.getElementById("popup-description").textContent = services[name];
+}
