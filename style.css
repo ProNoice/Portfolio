@@ -590,7 +590,7 @@ nav .fas{
         padding: 0;
     }
     nav {
-        width: 100%;
+        width: 100vw;
         border-radius: 0;
         top: 0;
         margin: 0;
@@ -603,7 +603,7 @@ nav .fas{
         background: #0091ff;
         position: fixed;
         top: 0;
-        right: -300px;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
