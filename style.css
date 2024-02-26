@@ -16,6 +16,7 @@ body{
 
 img {
     pointer-events: none;
+    user-select: none;
 }
 
 ::-webkit-scrollbar{
@@ -565,6 +566,26 @@ iframe {
     height: 356px;
 }
 
+.knowledge-frame {
+    backdrop-filter: blur(10px);
+    margin: 5px;
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    line-height: 125px;
+    background-color: #a8a8a838;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    user-select: none;
+    transition: 0.5s;
+}
+
+.knowledge-frame:hover {
+    transform: scale(1.1);
+    border: 1px solid white;
+    backdrop-filter: blur(2px);
+    background-color: #a1a1a1;
+}
+
 nav .fas{
     display: none;
 }
@@ -620,7 +641,20 @@ nav .fas{
         left: 25px;
         cursor: pointer;
     }
+    #popup-shadow {
+        position: fixed;
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
     #popup {
         width: 90%;
+    }
+    .knowledge-frame {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
     }
 }
