@@ -415,8 +415,10 @@ nav ul li a:hover::after{
     transform: translateY(-10px);
 }
 
-#portfolio{
+#projects{
     padding: 50px 0;
+    display: flexbox;
+    flex-wrap: nowrap;
 }
 
 .work{
@@ -424,7 +426,7 @@ nav ul li a:hover::after{
     backdrop-filter: blur(10px);
     margin: auto;
     margin-top: 5%;
-    width: 50%;
+    width: 60%;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -440,6 +442,18 @@ nav ul li a:hover::after{
 
 .work:hover img{
     transform: scale(1.1);
+}
+
+.tags {
+    display: flex;
+}
+
+.tag {
+    background-color: #61616196;
+    margin: 5px;
+    padding: 5px 15px;
+    border: #26262670 solid;
+    border-radius: 10px;
 }
 
 .layer{
