@@ -1,5 +1,12 @@
+const skipLoadingBtn = document.getElementById('skip-loading');
 
-window.addEventListener('load', (event) => {
+skipLoadingBtn.addEventListener('click', () => {
+    console.log("Skip")
+    const loader = document.querySelector('.loader');
+    loader.classList.add('loader-hidden');
+});
+
+window.addEventListener('load', () => {
     const loader = document.querySelector('.loader');
     loader.classList.add('loader-hidden');
     loader.addEventListener('transitionend', () => {

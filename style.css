@@ -600,6 +600,11 @@ iframe {
     background-color: #a1a1a1;
 }
 
+#skip-loading {
+    margin: 0;
+    margin-right: 50px;
+}
+
 nav .fas{
     display: none;
 }
